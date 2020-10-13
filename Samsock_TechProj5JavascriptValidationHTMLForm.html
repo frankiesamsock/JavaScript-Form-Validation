@@ -1,0 +1,58 @@
+<!-- 
+Author: Frank Samsock
+ Date: 10/13/2020 
+ Description: This is the original form but with a "validateForm" function and required
+ statements on the first and last name boxes.
+ -->
+
+<!DOCTYPE html5>
+<html>
+<body>
+<!-- This accesses the .css file -->
+<head>
+<link rel="stylesheet" href="html1styles.css">
+<script>
+<!-- This creates a function to validate the form -->
+function validateForm()
+ {
+  var x = document.forms["franksForm"]["eaddress"].value;
+  if (x == "") 
+  {
+    alert("An email address must be entered!");
+    return false;
+  }
+  
+ }
+ </script>
+</head>
+
+<!-- This is the header -->
+<h2>Frank Samsock & Co. - Customer Information</h2>
+<!-- Begins form -->
+<form name="franksForm" onsubmit="return validateForm()">
+
+<!-- Makes label -->
+  <label for="fname">First name:</label><br>
+  <!-- Allows input -->
+  <input type="text" id="fname" name="fname" required><br> <!-- The "required" at the end makes this input a requiremant for the user -->
+  <!-- Makes label -->
+  <label for="lname">Last name:</label><br>
+  <!-- Allows input -->
+  <input type="text" id="lname" name="lname" required><br><br> <!-- The "required" at the end makes this input a requiremant for the user -->
+  <!-- Makes label -->
+  <label for="eaddress">Email Address:</label><br>
+  <!-- Allows input -->
+  <input type="text" id="eaddress" name="eaddress"><br><br>
+  <!-- Allows user to submit -->
+  <input type="submit" value="Submit Data">
+  <!-- Allows user to reset -->
+  <input type="reset">
+  
+  <!-- End of form -->
+</form>
+
+
+<!-- End of body -->
+</body>
+</html>	<!-- Ends the HTML -->
+
